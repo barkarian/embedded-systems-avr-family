@@ -1,0 +1,53 @@
+<ASSEMBLER_INFO>
+ <VERSION>2.2.7</VERSION>
+ <DEVICE>"ATmega16"</DEVICE>
+ <WORKING_DIR>C:\Users\teo\Documents\Atmel Studio\7.0\lab3_proj\lab3_proj\Debug</WORKING_DIR>
+ <INCLUDE_PATH>
+  <DIR>C:/Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.3.300\avrasm\inc</DIR>
+  <DIR>C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\avr8\avrassembler\Include</DIR>
+  <DIR></DIR>
+ </INCLUDE_PATH>
+ <SOURCE_FILE>C:\Users\teo\Documents\Atmel Studio\7.0\lab3_proj\lab3_proj\main.asm</SOURCE_FILE>
+ <INCLUDED_FILES>
+  <FILE>C:/Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.3.300\avrasm\inc\m16def.inc</FILE>
+ </INCLUDED_FILES>
+ <OBJECT_FILES>
+  <FILE>C:\Users\teo\Documents\Atmel Studio\7.0\lab3_proj\lab3_proj\Debug\lab3_proj.obj</FILE>
+ </OBJECT_FILES>
+ <HEX_FILES>
+  <FILE>lab3_proj.hex</FILE>
+ </HEX_FILES>
+ <OUTPUT_FILES>
+  <FILE>lab3_proj.map</FILE>
+  <FILE>lab3_proj.lss</FILE>
+ </OUTPUT_FILES>
+ <LABELS>
+  <reset><FILE>C:\Users\teo\Documents\Atmel Studio\7.0\lab3_proj\lab3_proj\main.asm</FILE><LINE>25</LINE></reset>
+  <timerOVF><FILE>C:\Users\teo\Documents\Atmel Studio\7.0\lab3_proj\lab3_proj\main.asm</FILE><LINE>121</LINE></timerOVF>
+  <USART_Receive><FILE>C:\Users\teo\Documents\Atmel Studio\7.0\lab3_proj\lab3_proj\main.asm</FILE><LINE>165</LINE></USART_Receive>
+  <USART_Transmit_OK><FILE>C:\Users\teo\Documents\Atmel Studio\7.0\lab3_proj\lab3_proj\main.asm</FILE><LINE>247</LINE></USART_Transmit_OK>
+  <USART_Init><FILE>C:\Users\teo\Documents\Atmel Studio\7.0\lab3_proj\lab3_proj\main.asm</FILE><LINE>319</LINE></USART_Init>
+  <waitloop><FILE>C:\Users\teo\Documents\Atmel Studio\7.0\lab3_proj\lab3_proj\main.asm</FILE><LINE>112</LINE></waitloop>
+  <if1><FILE>C:\Users\teo\Documents\Atmel Studio\7.0\lab3_proj\lab3_proj\main.asm</FILE><LINE>135</LINE></if1>
+  <endif1><FILE>C:\Users\teo\Documents\Atmel Studio\7.0\lab3_proj\lab3_proj\main.asm</FILE><LINE>140</LINE></endif1>
+  <INIT><FILE>C:\Users\teo\Documents\Atmel Studio\7.0\lab3_proj\lab3_proj\main.asm</FILE><LINE>195</LINE></INIT>
+  <TWAIT><FILE>C:\Users\teo\Documents\Atmel Studio\7.0\lab3_proj\lab3_proj\main.asm</FILE><LINE>215</LINE></TWAIT>
+  <BYTEOUT><FILE>C:\Users\teo\Documents\Atmel Studio\7.0\lab3_proj\lab3_proj\main.asm</FILE><LINE>219</LINE></BYTEOUT>
+  <CRWAIT><FILE>C:\Users\teo\Documents\Atmel Studio\7.0\lab3_proj\lab3_proj\main.asm</FILE><LINE>230</LINE></CRWAIT>
+  <LFWAIT><FILE>C:\Users\teo\Documents\Atmel Studio\7.0\lab3_proj\lab3_proj\main.asm</FILE><LINE>233</LINE></LFWAIT>
+  <controlif1><FILE>C:\Users\teo\Documents\Atmel Studio\7.0\lab3_proj\lab3_proj\main.asm</FILE><LINE>202</LINE></controlif1>
+  <controlif2><FILE>C:\Users\teo\Documents\Atmel Studio\7.0\lab3_proj\lab3_proj\main.asm</FILE><LINE>205</LINE></controlif2>
+  <controlif3><FILE>C:\Users\teo\Documents\Atmel Studio\7.0\lab3_proj\lab3_proj\main.asm</FILE><LINE>209</LINE></controlif3>
+  <return1><FILE>C:\Users\teo\Documents\Atmel Studio\7.0\lab3_proj\lab3_proj\main.asm</FILE><LINE>240</LINE></return1>
+  <clearAllBytes><FILE>C:\Users\teo\Documents\Atmel Studio\7.0\lab3_proj\lab3_proj\main.asm</FILE><LINE>301</LINE></clearAllBytes>
+  <controlif4><FILE>C:\Users\teo\Documents\Atmel Studio\7.0\lab3_proj\lab3_proj\main.asm</FILE><LINE>227</LINE></controlif4>
+  <shiftAllBytesRight><FILE>C:\Users\teo\Documents\Atmel Studio\7.0\lab3_proj\lab3_proj\main.asm</FILE><LINE>280</LINE></shiftAllBytesRight>
+  <USART_Transmit_K><FILE>C:\Users\teo\Documents\Atmel Studio\7.0\lab3_proj\lab3_proj\main.asm</FILE><LINE>255</LINE></USART_Transmit_K>
+  <USART_Transmit_CR><FILE>C:\Users\teo\Documents\Atmel Studio\7.0\lab3_proj\lab3_proj\main.asm</FILE><LINE>262</LINE></USART_Transmit_CR>
+  <USART_Transmit_LF><FILE>C:\Users\teo\Documents\Atmel Studio\7.0\lab3_proj\lab3_proj\main.asm</FILE><LINE>268</LINE></USART_Transmit_LF>
+  <whileLoop2><FILE>C:\Users\teo\Documents\Atmel Studio\7.0\lab3_proj\lab3_proj\main.asm</FILE><LINE>288</LINE></whileLoop2>
+  <if2><FILE>C:\Users\teo\Documents\Atmel Studio\7.0\lab3_proj\lab3_proj\main.asm</FILE><LINE>296</LINE></if2>
+  <whileLoop3><FILE>C:\Users\teo\Documents\Atmel Studio\7.0\lab3_proj\lab3_proj\main.asm</FILE><LINE>307</LINE></whileLoop3>
+  <if3><FILE>C:\Users\teo\Documents\Atmel Studio\7.0\lab3_proj\lab3_proj\main.asm</FILE><LINE>313</LINE></if3>
+ </LABELS>
+</ASSEMBLER_INFO>

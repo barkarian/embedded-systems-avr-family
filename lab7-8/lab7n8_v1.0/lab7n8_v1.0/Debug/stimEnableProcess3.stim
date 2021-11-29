@@ -1,0 +1,16 @@
+R15 = 0x53
+UCSRA = 0b10000000
+#3000
+R15 = 0x33
+UCSRA = 0b10000000
+#3000
+R15 = 0x0D
+UCSRA = 0b10000000
+#3000
+UCSRA = 0b10000000
+R15 = 0x0A
+
+$log TCNT2
+$startlog lab3.log
+#10000
+$stoplog

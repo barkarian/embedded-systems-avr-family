@@ -1,0 +1,31 @@
+<ASSEMBLER_INFO>
+ <VERSION>2.2.7</VERSION>
+ <DEVICE>"ATmega16"</DEVICE>
+ <WORKING_DIR>C:\Users\teo\Desktop\Ìáèçìáôá 9ï\enswmatomena\lab2\lab2_proj\lab2_proj\Debug</WORKING_DIR>
+ <INCLUDE_PATH>
+  <DIR>C:/Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.3.300\avrasm\inc</DIR>
+  <DIR>C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\avr8\avrassembler\Include</DIR>
+  <DIR></DIR>
+ </INCLUDE_PATH>
+ <SOURCE_FILE>C:\Users\teo\Desktop\Ìáèçìáôá 9ï\enswmatomena\lab2\lab2_proj\lab2_proj\main.asm</SOURCE_FILE>
+ <INCLUDED_FILES>
+  <FILE>C:/Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.3.300\avrasm\inc\m16def.inc</FILE>
+ </INCLUDED_FILES>
+ <OBJECT_FILES>
+  <FILE>C:\Users\teo\Desktop\Ìáèçìáôá 9ï\enswmatomena\lab2\lab2_proj\lab2_proj\Debug\lab2_proj.obj</FILE>
+ </OBJECT_FILES>
+ <HEX_FILES>
+  <FILE>lab2_proj.hex</FILE>
+ </HEX_FILES>
+ <OUTPUT_FILES>
+  <FILE>lab2_proj.map</FILE>
+  <FILE>lab2_proj.lss</FILE>
+ </OUTPUT_FILES>
+ <LABELS>
+  <reset><FILE>C:\Users\teo\Desktop\Ìáèçìáôá 9ï\enswmatomena\lab2\lab2_proj\lab2_proj\main.asm</FILE><LINE>18</LINE></reset>
+  <timerOVF><FILE>C:\Users\teo\Desktop\Ìáèçìáôá 9ï\enswmatomena\lab2\lab2_proj\lab2_proj\main.asm</FILE><LINE>103</LINE></timerOVF>
+  <waitloop><FILE>C:\Users\teo\Desktop\Ìáèçìáôá 9ï\enswmatomena\lab2\lab2_proj\lab2_proj\main.asm</FILE><LINE>100</LINE></waitloop>
+  <if1><FILE>C:\Users\teo\Desktop\Ìáèçìáôá 9ï\enswmatomena\lab2\lab2_proj\lab2_proj\main.asm</FILE><LINE>114</LINE></if1>
+  <endif1><FILE>C:\Users\teo\Desktop\Ìáèçìáôá 9ï\enswmatomena\lab2\lab2_proj\lab2_proj\main.asm</FILE><LINE>119</LINE></endif1>
+ </LABELS>
+</ASSEMBLER_INFO>

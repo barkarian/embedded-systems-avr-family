@@ -1,0 +1,303 @@
+
+lab10_intMult.elf:     file format elf32-avr
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .text         00000196  00000000  00000000  00000054  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  1 .data         00000000  00800060  00800060  000001ea  2**0
+                  CONTENTS, ALLOC, LOAD, DATA
+  2 .comment      00000030  00000000  00000000  000001ea  2**0
+                  CONTENTS, READONLY
+  3 .note.gnu.avr.deviceinfo 0000003c  00000000  00000000  0000021c  2**2
+                  CONTENTS, READONLY
+  4 .debug_aranges 00000038  00000000  00000000  00000258  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  5 .debug_info   00000775  00000000  00000000  00000290  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  6 .debug_abbrev 000005dd  00000000  00000000  00000a05  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  7 .debug_line   00000241  00000000  00000000  00000fe2  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  8 .debug_frame  00000088  00000000  00000000  00001224  2**2
+                  CONTENTS, READONLY, DEBUGGING
+  9 .debug_str    00000315  00000000  00000000  000012ac  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 10 .debug_loc    000001f0  00000000  00000000  000015c1  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 11 .debug_ranges 00000088  00000000  00000000  000017b1  2**0
+                  CONTENTS, READONLY, DEBUGGING
+
+Disassembly of section .text:
+
+00000000 <__vectors>:
+   0:	0c 94 2a 00 	jmp	0x54	; 0x54 <__ctors_end>
+   4:	0c 94 34 00 	jmp	0x68	; 0x68 <__bad_interrupt>
+   8:	0c 94 34 00 	jmp	0x68	; 0x68 <__bad_interrupt>
+   c:	0c 94 34 00 	jmp	0x68	; 0x68 <__bad_interrupt>
+  10:	0c 94 34 00 	jmp	0x68	; 0x68 <__bad_interrupt>
+  14:	0c 94 34 00 	jmp	0x68	; 0x68 <__bad_interrupt>
+  18:	0c 94 34 00 	jmp	0x68	; 0x68 <__bad_interrupt>
+  1c:	0c 94 34 00 	jmp	0x68	; 0x68 <__bad_interrupt>
+  20:	0c 94 34 00 	jmp	0x68	; 0x68 <__bad_interrupt>
+  24:	0c 94 34 00 	jmp	0x68	; 0x68 <__bad_interrupt>
+  28:	0c 94 34 00 	jmp	0x68	; 0x68 <__bad_interrupt>
+  2c:	0c 94 34 00 	jmp	0x68	; 0x68 <__bad_interrupt>
+  30:	0c 94 34 00 	jmp	0x68	; 0x68 <__bad_interrupt>
+  34:	0c 94 34 00 	jmp	0x68	; 0x68 <__bad_interrupt>
+  38:	0c 94 34 00 	jmp	0x68	; 0x68 <__bad_interrupt>
+  3c:	0c 94 34 00 	jmp	0x68	; 0x68 <__bad_interrupt>
+  40:	0c 94 34 00 	jmp	0x68	; 0x68 <__bad_interrupt>
+  44:	0c 94 34 00 	jmp	0x68	; 0x68 <__bad_interrupt>
+  48:	0c 94 34 00 	jmp	0x68	; 0x68 <__bad_interrupt>
+  4c:	0c 94 34 00 	jmp	0x68	; 0x68 <__bad_interrupt>
+  50:	0c 94 34 00 	jmp	0x68	; 0x68 <__bad_interrupt>
+
+00000054 <__ctors_end>:
+  54:	11 24       	eor	r1, r1
+  56:	1f be       	out	0x3f, r1	; 63
+  58:	cf e5       	ldi	r28, 0x5F	; 95
+  5a:	d4 e0       	ldi	r29, 0x04	; 4
+  5c:	de bf       	out	0x3e, r29	; 62
+  5e:	cd bf       	out	0x3d, r28	; 61
+  60:	0e 94 ba 00 	call	0x174	; 0x174 <main>
+  64:	0c 94 c9 00 	jmp	0x192	; 0x192 <_exit>
+
+00000068 <__bad_interrupt>:
+  68:	0c 94 00 00 	jmp	0	; 0x0 <__vectors>
+
+0000006c <initTableInt>:
+		initTableInt(A);
+		initTableInt(B);
+}
+
+void initTableInt(int * A){
+	for(int i=0;i<arrayWidth;i++){
+  6c:	60 e0       	ldi	r22, 0x00	; 0
+  6e:	70 e0       	ldi	r23, 0x00	; 0
+  70:	18 c0       	rjmp	.+48     	; 0xa2 <initTableInt+0x36>
+		for(int j=0;j<arrayWidth;j++){
+			A[i*arrayWidth+j]=i*arrayWidth+j;
+  72:	9b 01       	movw	r18, r22
+  74:	22 0f       	add	r18, r18
+  76:	33 1f       	adc	r19, r19
+  78:	26 0f       	add	r18, r22
+  7a:	37 1f       	adc	r19, r23
+  7c:	24 0f       	add	r18, r20
+  7e:	35 1f       	adc	r19, r21
+  80:	f9 01       	movw	r30, r18
+  82:	ee 0f       	add	r30, r30
+  84:	ff 1f       	adc	r31, r31
+  86:	e8 0f       	add	r30, r24
+  88:	f9 1f       	adc	r31, r25
+  8a:	31 83       	std	Z+1, r19	; 0x01
+  8c:	20 83       	st	Z, r18
+		initTableInt(B);
+}
+
+void initTableInt(int * A){
+	for(int i=0;i<arrayWidth;i++){
+		for(int j=0;j<arrayWidth;j++){
+  8e:	4f 5f       	subi	r20, 0xFF	; 255
+  90:	5f 4f       	sbci	r21, 0xFF	; 255
+  92:	02 c0       	rjmp	.+4      	; 0x98 <initTableInt+0x2c>
+  94:	40 e0       	ldi	r20, 0x00	; 0
+  96:	50 e0       	ldi	r21, 0x00	; 0
+  98:	43 30       	cpi	r20, 0x03	; 3
+  9a:	51 05       	cpc	r21, r1
+  9c:	54 f3       	brlt	.-44     	; 0x72 <initTableInt+0x6>
+		initTableInt(A);
+		initTableInt(B);
+}
+
+void initTableInt(int * A){
+	for(int i=0;i<arrayWidth;i++){
+  9e:	6f 5f       	subi	r22, 0xFF	; 255
+  a0:	7f 4f       	sbci	r23, 0xFF	; 255
+  a2:	63 30       	cpi	r22, 0x03	; 3
+  a4:	71 05       	cpc	r23, r1
+  a6:	b4 f3       	brlt	.-20     	; 0x94 <initTableInt+0x28>
+		for(int j=0;j<arrayWidth;j++){
+			A[i*arrayWidth+j]=i*arrayWidth+j;
+		}
+	}
+}
+  a8:	08 95       	ret
+
+000000aa <init2tables>:
+#define arrayWidth 3
+void initTableInt(int * A);
+void init3tables(int *A,int *B,int *C);
+void multiply_tables_3x3(int * A,int *B,int *C);
+
+void init2tables(int *A,int *B){
+  aa:	cf 93       	push	r28
+  ac:	df 93       	push	r29
+  ae:	eb 01       	movw	r28, r22
+		initTableInt(A);
+  b0:	0e 94 36 00 	call	0x6c	; 0x6c <initTableInt>
+		initTableInt(B);
+  b4:	ce 01       	movw	r24, r28
+  b6:	0e 94 36 00 	call	0x6c	; 0x6c <initTableInt>
+}
+  ba:	df 91       	pop	r29
+  bc:	cf 91       	pop	r28
+  be:	08 95       	ret
+
+000000c0 <multiply_tables_3x3>:
+			A[i*arrayWidth+j]=i*arrayWidth+j;
+		}
+	}
+}
+
+void multiply_tables_3x3(int * A,int *B,int *C){
+  c0:	cf 92       	push	r12
+  c2:	df 92       	push	r13
+  c4:	ef 92       	push	r14
+  c6:	ff 92       	push	r15
+  c8:	0f 93       	push	r16
+  ca:	1f 93       	push	r17
+  cc:	cf 93       	push	r28
+  ce:	df 93       	push	r29
+	for(int i=0;i<arrayWidth;i++){
+  d0:	a0 e0       	ldi	r26, 0x00	; 0
+  d2:	b0 e0       	ldi	r27, 0x00	; 0
+  d4:	43 c0       	rjmp	.+134    	; 0x15c <multiply_tables_3x3+0x9c>
+		for(int j=0;j<arrayWidth;j++){
+			int sum=0;
+			for(int k=0;k<=arrayWidth;k++){
+				sum=sum +A[i*arrayWidth+k]*B[k*arrayWidth+j];	//sum=sum +A[i][k] * B[k][j];	
+  d6:	fd 01       	movw	r30, r26
+  d8:	ee 0f       	add	r30, r30
+  da:	ff 1f       	adc	r31, r31
+  dc:	ea 0f       	add	r30, r26
+  de:	fb 1f       	adc	r31, r27
+  e0:	e2 0f       	add	r30, r18
+  e2:	f3 1f       	adc	r31, r19
+  e4:	ee 0f       	add	r30, r30
+  e6:	ff 1f       	adc	r31, r31
+  e8:	e8 0f       	add	r30, r24
+  ea:	f9 1f       	adc	r31, r25
+  ec:	e0 80       	ld	r14, Z
+  ee:	f1 80       	ldd	r15, Z+1	; 0x01
+  f0:	f9 01       	movw	r30, r18
+  f2:	ee 0f       	add	r30, r30
+  f4:	ff 1f       	adc	r31, r31
+  f6:	e2 0f       	add	r30, r18
+  f8:	f3 1f       	adc	r31, r19
+  fa:	e0 0f       	add	r30, r16
+  fc:	f1 1f       	adc	r31, r17
+  fe:	ee 0f       	add	r30, r30
+ 100:	ff 1f       	adc	r31, r31
+ 102:	e6 0f       	add	r30, r22
+ 104:	f7 1f       	adc	r31, r23
+ 106:	c0 80       	ld	r12, Z
+ 108:	d1 80       	ldd	r13, Z+1	; 0x01
+ 10a:	ec 9c       	mul	r14, r12
+ 10c:	f0 01       	movw	r30, r0
+ 10e:	ed 9c       	mul	r14, r13
+ 110:	f0 0d       	add	r31, r0
+ 112:	fc 9c       	mul	r15, r12
+ 114:	f0 0d       	add	r31, r0
+ 116:	11 24       	eor	r1, r1
+ 118:	ce 0f       	add	r28, r30
+ 11a:	df 1f       	adc	r29, r31
+
+void multiply_tables_3x3(int * A,int *B,int *C){
+	for(int i=0;i<arrayWidth;i++){
+		for(int j=0;j<arrayWidth;j++){
+			int sum=0;
+			for(int k=0;k<=arrayWidth;k++){
+ 11c:	2f 5f       	subi	r18, 0xFF	; 255
+ 11e:	3f 4f       	sbci	r19, 0xFF	; 255
+ 120:	04 c0       	rjmp	.+8      	; 0x12a <multiply_tables_3x3+0x6a>
+ 122:	20 e0       	ldi	r18, 0x00	; 0
+ 124:	30 e0       	ldi	r19, 0x00	; 0
+ 126:	c0 e0       	ldi	r28, 0x00	; 0
+ 128:	d0 e0       	ldi	r29, 0x00	; 0
+ 12a:	24 30       	cpi	r18, 0x04	; 4
+ 12c:	31 05       	cpc	r19, r1
+ 12e:	9c f2       	brlt	.-90     	; 0xd6 <multiply_tables_3x3+0x16>
+				sum=sum +A[i*arrayWidth+k]*B[k*arrayWidth+j];	//sum=sum +A[i][k] * B[k][j];	
+			}
+			C[i*arrayWidth+j]=sum;
+ 130:	fd 01       	movw	r30, r26
+ 132:	ee 0f       	add	r30, r30
+ 134:	ff 1f       	adc	r31, r31
+ 136:	ea 0f       	add	r30, r26
+ 138:	fb 1f       	adc	r31, r27
+ 13a:	e0 0f       	add	r30, r16
+ 13c:	f1 1f       	adc	r31, r17
+ 13e:	ee 0f       	add	r30, r30
+ 140:	ff 1f       	adc	r31, r31
+ 142:	e4 0f       	add	r30, r20
+ 144:	f5 1f       	adc	r31, r21
+ 146:	d1 83       	std	Z+1, r29	; 0x01
+ 148:	c0 83       	st	Z, r28
+	}
+}
+
+void multiply_tables_3x3(int * A,int *B,int *C){
+	for(int i=0;i<arrayWidth;i++){
+		for(int j=0;j<arrayWidth;j++){
+ 14a:	0f 5f       	subi	r16, 0xFF	; 255
+ 14c:	1f 4f       	sbci	r17, 0xFF	; 255
+ 14e:	02 c0       	rjmp	.+4      	; 0x154 <multiply_tables_3x3+0x94>
+ 150:	00 e0       	ldi	r16, 0x00	; 0
+ 152:	10 e0       	ldi	r17, 0x00	; 0
+ 154:	03 30       	cpi	r16, 0x03	; 3
+ 156:	11 05       	cpc	r17, r1
+ 158:	24 f3       	brlt	.-56     	; 0x122 <multiply_tables_3x3+0x62>
+		}
+	}
+}
+
+void multiply_tables_3x3(int * A,int *B,int *C){
+	for(int i=0;i<arrayWidth;i++){
+ 15a:	11 96       	adiw	r26, 0x01	; 1
+ 15c:	a3 30       	cpi	r26, 0x03	; 3
+ 15e:	b1 05       	cpc	r27, r1
+ 160:	bc f3       	brlt	.-18     	; 0x150 <multiply_tables_3x3+0x90>
+				sum=sum +A[i*arrayWidth+k]*B[k*arrayWidth+j];	//sum=sum +A[i][k] * B[k][j];	
+			}
+			C[i*arrayWidth+j]=sum;
+		}
+	}
+}
+ 162:	df 91       	pop	r29
+ 164:	cf 91       	pop	r28
+ 166:	1f 91       	pop	r17
+ 168:	0f 91       	pop	r16
+ 16a:	ff 90       	pop	r15
+ 16c:	ef 90       	pop	r14
+ 16e:	df 90       	pop	r13
+ 170:	cf 90       	pop	r12
+ 172:	08 95       	ret
+
+00000174 <main>:
+	thats why there's no danger of overlapping and overwritten with each other.
+	----------------------------------------------------------------------*/
+	int * A =(int *) 0x60;
+	int * B =(int *) 0x84;
+	int * C =(int *) 0xA8;
+	init2tables(A,B);
+ 174:	64 e8       	ldi	r22, 0x84	; 132
+ 176:	70 e0       	ldi	r23, 0x00	; 0
+ 178:	80 e6       	ldi	r24, 0x60	; 96
+ 17a:	90 e0       	ldi	r25, 0x00	; 0
+ 17c:	0e 94 55 00 	call	0xaa	; 0xaa <init2tables>
+	multiply_tables_3x3(A,B,C);
+ 180:	48 ea       	ldi	r20, 0xA8	; 168
+ 182:	50 e0       	ldi	r21, 0x00	; 0
+ 184:	64 e8       	ldi	r22, 0x84	; 132
+ 186:	70 e0       	ldi	r23, 0x00	; 0
+ 188:	80 e6       	ldi	r24, 0x60	; 96
+ 18a:	90 e0       	ldi	r25, 0x00	; 0
+ 18c:	0e 94 60 00 	call	0xc0	; 0xc0 <multiply_tables_3x3>
+ 190:	ff cf       	rjmp	.-2      	; 0x190 <main+0x1c>
+
+00000192 <_exit>:
+ 192:	f8 94       	cli
+
+00000194 <__stop_program>:
+ 194:	ff cf       	rjmp	.-2      	; 0x194 <__stop_program>

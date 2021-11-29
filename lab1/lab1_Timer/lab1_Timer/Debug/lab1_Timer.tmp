@@ -1,0 +1,29 @@
+<ASSEMBLER_INFO>
+ <VERSION>2.2.7</VERSION>
+ <DEVICE>"ATmega16"</DEVICE>
+ <WORKING_DIR>C:\Users\teo\Documents\Atmel Studio\7.0\lab1_Timer\lab1_Timer\Debug</WORKING_DIR>
+ <INCLUDE_PATH>
+  <DIR>C:/Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.3.300\avrasm\inc</DIR>
+  <DIR>C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\avr8\avrassembler\Include</DIR>
+  <DIR></DIR>
+ </INCLUDE_PATH>
+ <SOURCE_FILE>C:\Users\teo\Documents\Atmel Studio\7.0\lab1_Timer\lab1_Timer\main.asm</SOURCE_FILE>
+ <INCLUDED_FILES>
+  <FILE>C:/Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.3.300\avrasm\inc\m16def.inc</FILE>
+ </INCLUDED_FILES>
+ <OBJECT_FILES>
+  <FILE>C:\Users\teo\Documents\Atmel Studio\7.0\lab1_Timer\lab1_Timer\Debug\lab1_Timer.obj</FILE>
+ </OBJECT_FILES>
+ <HEX_FILES>
+  <FILE>lab1_Timer.hex</FILE>
+ </HEX_FILES>
+ <OUTPUT_FILES>
+  <FILE>lab1_Timer.map</FILE>
+  <FILE>lab1_Timer.lss</FILE>
+ </OUTPUT_FILES>
+ <LABELS>
+  <reset><FILE>C:\Users\teo\Documents\Atmel Studio\7.0\lab1_Timer\lab1_Timer\main.asm</FILE><LINE>18</LINE></reset>
+  <timerOVF><FILE>C:\Users\teo\Documents\Atmel Studio\7.0\lab1_Timer\lab1_Timer\main.asm</FILE><LINE>41</LINE></timerOVF>
+  <waitloop><FILE>C:\Users\teo\Documents\Atmel Studio\7.0\lab1_Timer\lab1_Timer\main.asm</FILE><LINE>38</LINE></waitloop>
+ </LABELS>
+</ASSEMBLER_INFO>

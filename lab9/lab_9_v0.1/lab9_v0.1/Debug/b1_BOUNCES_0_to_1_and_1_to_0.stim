@@ -1,0 +1,56 @@
+//SWITCH from 0 to 1 RESET BOUNCES
+//---------------//------COMMENTS-------------------------TRIGGER------C_EDGE-------------------------SWITCH A
+PIND = 0b0001000 //INT1=RESET=1 INT0=SET=0 	->Interrupt NOT TRIGGER	-RISING EDGE 		-INITIALIZATION 				->0
+#1000
+
+PIND = 0b0001000 //INT1=RESET=1 INT0=SET=0 	->Interrupt NOT TRIGGER	-SAME AS BEFORE		-no changes
+#1000
+
+PIND = 0b0001100 //INT1=RESET=1 INT0=SET=1 	->Interrupt NOT TRIGGER	-RISING EDGE "11" 	-no changes
+#1000
+
+PIND = 0b0000100 //INT1=RESET=0 INT0=SET=1 	->Interrupt TRIGGER		-FALLING EDGE RESET 								->1
+#1000
+
+PIND = 0b0001100 //INT1=RESET=1 INT0=SET=1 	->Interrupt NOT TRIGGER	-RISING EDGE "11" 	-no changes
+#1000
+
+PIND = 0b0000100 //INT1=RESET=0 INT0=SET=1  ->Interrupt TRIGGER		-FALLING EDGE RESET	-no changes"same as before"		->1
+#1000
+
+PIND = 0b0001100 //INT1=RESET=1 INT0=SET=1  ->Interrupt NOT TRIGGER	-RISING EDGE "11" 	-no changes
+#1000
+
+PIND = 0b0000100 //INT1=RESET=0 INT0=SET=1  ->Interrupt TRIGGER		-FALLING EDGE RESET	-no changes"same as before"		->1
+#1000
+
+PIND = 0b0000100 //INT1=RESET=0 INT0=SET=1 	->Interrupt NOT TRIGGER	-SAME AS BEFORE	-no changes
+#1000
+
+
+//SWITCH from 1 to 0 SET BOUNCES
+#50000
+//---------------//------COMMENTS-------------------------TRIGGER------C_EDGE-------------------------SWITCH A
+PIND = 0b0000100 //INT1=RESET=0 INT0=SET=1 	->Interrupt NOT TRIGGER	-SAME AS BEFORE		-no changes					->1
+#1000
+
+PIND = 0b0001100 //INT1=RESET=1 INT0=SET=1 	->Interrupt NOT TRIGGER	-RISING EDGE "11" 	-no changes
+#1000
+
+PIND = 0b0001000 //INT1=RESET=1 INT0=SET=0 	->Interrupt TRIGGER		-FALLING EDGE SET 								->0
+#1000
+
+PIND = 0b0001100 //INT1=RESET=1 INT0=SET=1 	->Interrupt NOT TRIGGER	-RISING EDGE "11" 	-no changes
+#1000
+
+PIND = 0b0001000 //INT1=RESET=1 INT0=SET=0  ->Interrupt TRIGGER		-FALLING EDGE RESET	-no changes"same as before"	->0
+#1000
+
+PIND = 0b0001100 //INT1=RESET=1 INT0=SET=1  ->Interrupt NOT TRIGGER	-RISING EDGE "11" 	-no changes
+#1000
+
+PIND = 0b0001000 //INT1=RESET=1 INT0=SET=0	->Interrupt TRIGGER		-FALLING EDGE RESET	-no changes"same as before"	->0
+#1000
+
+PIND = 0b0001000 //INT1=RESET=1 INT0=SET=0 	->Interrupt NOT TRIGGER	-SAME AS BEFORE	-no changes
+#1000
